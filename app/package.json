@@ -1,0 +1,22 @@
+{
+  "name": "42-portfolio",
+  "version": "1.0.0",
+  "description": "A portfolio generator for 42 projects",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PukieDiederik/42-east-hackathon.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PukieDiederik/42-east-hackathon/issues"
+  },
+  "homepage": "https://github.com/PukieDiederik/42-east-hackathon#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
