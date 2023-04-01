@@ -1,5 +1,5 @@
 import { Profile } from './componets/profile/profile'
-import { Project } from './componets/projects/project'
+import { Project} from './componets/projects/project'
 import './App.css'
 
 function App() {
