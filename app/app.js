@@ -29,12 +29,20 @@ app.get('/user/:user', (req, res) => {
 	// update data with new info
 	data.name = res_json.displayname;
 	data.image = res_json.image.link;
+	data.campus = res_json.campus[0].name;
+	data.cursus = res_json.cursus_users[1].cursus.name;
+	data.grade = res_json.cursus_users[1].grade;
+	data.kind = res_json.kind;
 
 	// Find project ids
 	let project_ids = []
 	for (project of res_json.projects_users)
 	{
-		if (project.status == "finished")
+		//console.log(project)
+		// Tried to get validated instead of status
+		/* if (project.validated === true)
+			project_ids.push(project.project.id); */
+		if (project.status === "finished")
 			project_ids.push(project.project.id);
 	}
 
@@ -52,10 +60,9 @@ app.get('/user/:user', (req, res) => {
 	for (project of project_json)
 	{
 		let is_piscine = false;
-
 		// Check if we should add this project to the list
 		if (project.exam == true)
-			continue;
+		continue;
 		for(cursus of project.cursus)
 		{
 			if (cursus.kind == 'piscine')
@@ -64,15 +71,29 @@ app.get('/user/:user', (req, res) => {
 				break;
 			}
 		}
+		
+		// Add all the keywords from that project to the json (could have)
+		let keywordsArr = [];
+		project.project_sessions[0].objectives.forEach(key => {
+			keywordsArr.push(key);
+		});
+		
 		// Add project to list if it isn't a piscine
 		if (!is_piscine)
 		{
-		data.projects.push({
-			"name":project.name,
-			"description":project.description,
+			let difficulty = 0;
+			difficulty = project.project_sessions[0].difficulty;
+			/* if(difficulty <= 0) {
+				difficulty = 100;
+			} */
+			data.projects.push({
+				"name": project.name,
+				"description": project.project_sessions[0].description,
+				"keywords": keywordsArr,
+				"difficulty": difficulty,
 		});}
 	}
-
+	
 	//return data
 	res.json(data);
 });
@@ -89,6 +110,6 @@ app.listen(process.env.PORT, () =>
 	req.send(`grant_type=client_credentials&client_id=${process.env.API42_UID}&client_secret=${process.env.API42_SECRET}`);
 	
 	access_token = JSON.parse(req.responseText).access_token;
-	console.log("Obtained access token");
+	console.log("Obtained access token\n" + access_token);
 });
 
