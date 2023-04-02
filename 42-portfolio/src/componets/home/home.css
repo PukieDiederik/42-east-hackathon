@@ -59,3 +59,9 @@ html, body, .home:before
     border-radius: 50%;
     animation: spin 2s linear infinite;
 }
+
+.error {
+    background-color: #b2c1cb;
+    color: #b55c08;
+    font-size: 50px;
+}
