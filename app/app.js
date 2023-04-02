@@ -3,8 +3,11 @@ require('dotenv').config()
 const express = require("express");
 var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 const app = express();
+const cors = require("cors");
 
 var access_token = 0;
+
+app.use(cors());
 
 app.get('/', (req, res) => {
 	res.send('hello world!');
