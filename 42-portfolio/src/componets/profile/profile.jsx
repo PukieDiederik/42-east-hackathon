@@ -105,7 +105,7 @@ export function Profile() {
                     <stop offset="1" stop-color="#169d97"/>
                 </linearGradient>
                 <pattern id="photo" patternUnits="userSpaceOnUse" width="300" height="200">
-                    <image href={user.image} x="105" y="5" width="200" height="200" />
+                    <image href={user.image} x="125" y="5" width="150" height="150" />
                 </pattern>
             </defs>
             <g>
