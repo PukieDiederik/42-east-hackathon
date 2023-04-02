@@ -1,0 +1,33 @@
+
+html, body
+{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url('../../img/backgr.png');
+    background-size: cover;
+    overflow: hidden;
+}
+
+.home, .home:after, form
+{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 50%;
+    height: 100vh;
+    margin: auto;
+}
+
+.home>form
+{
+    transform: translateX(5px) scale(2);
+    transform-origin: center center;
+    align-items: center;
+}
+
+.material-symbols-outlined
+{
+    transform: translateY(5px);
+}
