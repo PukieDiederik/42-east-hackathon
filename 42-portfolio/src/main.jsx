@@ -13,7 +13,7 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
   {
-    path: "/:loginId/:repoId",
+    path: "/:loginId",
     element: <App />,
     errorElement: <ErrorPage />,
   },
