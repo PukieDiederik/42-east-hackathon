@@ -2,7 +2,7 @@ all: init start
 
 init: app/.env
 	cd app && npm i
-	# TODO: setup frontend
+	cd 42-portfolio && npm i
 
 app/.env:
 	touch app/.env
@@ -14,4 +14,4 @@ start_backend:
 	cd app && node app.js
 
 start_frontend:
-	# TODO:
+	cd 42-portfolio && npm run dev
