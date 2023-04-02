@@ -1,5 +1,6 @@
 import { Profile } from "./componets/profile/profile";
 import { Project } from "./componets/projects/project";
+import { Cursus } from "./componets/projects/project";
 import "./App.css";
 
 function App() {
@@ -7,6 +8,8 @@ function App() {
     <div className="App">
       <Profile />
       <Project />
+      <Project />
+      <Cursus />
     </div>
   );
 }
