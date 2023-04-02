@@ -27,6 +27,7 @@ app.get('/user/:user', (req, res) => {
 	res_json = JSON.parse(xhr.responseText);
 
 	// update data with new info
+	data.user_id = res_json.id;
 	data.name = res_json.displayname;
 	data.image = res_json.image.link;
 	data.campus = res_json.campus[0].name;
