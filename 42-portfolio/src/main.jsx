@@ -5,6 +5,7 @@ import App from "./App";
 import "./index.css";
 import { Home } from "./componets/home/home";
 import ErrorPage from "./componets/Error/error";
+import { ContextUserProvider } from "./context/contextUser";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <ContextUserProvider>
+      <RouterProvider router={router} />
+    </ContextUserProvider>
   </React.StrictMode>
 );

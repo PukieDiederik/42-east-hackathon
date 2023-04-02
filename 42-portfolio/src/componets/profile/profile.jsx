@@ -1,5 +1,8 @@
+import { useContext } from "react";
+import ContextUser from "../../context/contextUser";
 import "./profile.css";
 export function Profile() {
+  const { user, setUser } = useContext(ContextUser);
   return (
     <header className="profile">
       {/*
@@ -29,7 +32,7 @@ export function Profile() {
               height="116"
             >
               <image
-                href="http://t0.gstatic.com/licensed-image?q=tbn:ANd9GcQkrjYxSfSHeCEA7hkPy8e2JphDsfFHZVKqx-3t37E4XKr-AT7DML8IwtwY0TnZsUcQ"
+                href={user.image}
                 x="-20"
                 y="-20"
                 width="116"
@@ -58,7 +61,7 @@ export function Profile() {
         </svg>
       </div>
       <div className="profile-info">
-        <h1 className="profile-name">John Doe</h1>
+        <h1 className="profile-name">{user.name}</h1>
         <div className="profile-score">
           <div className="profile-score-svg">
             <svg
