@@ -1,0 +1,49 @@
+
+.profile{
+    width: 100%;
+}
+
+#lines
+{
+    position: absolute;
+    position:absolute;
+    transform:scale(0.5);
+    height: 200vh;
+    top: -300px;
+    left: 300px;
+}
+
+.profile-svg {
+    position: relative;
+}
+
+.profile-info {
+    margin-top: 8vh;
+    padding: 0 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    border: 1px solid blue;
+}
+
+.profile-name {
+    width: 57%;
+    margin-bottom: 0;
+    /* border: 1px solid green; */
+}
+
+.profile-score {
+    /* border: 1px solid green; */
+    width: 57%;
+    display: flex;
+    flex-basis: 50%;
+    justify-content: space-between;
+    gap: 100px;
+    margin-top: 10px;
+
+}
+.profile-score-svg {
+    /* transform: scale(1); */
+    border: 1px solid forestgreen;
+    width: 100px;
+}

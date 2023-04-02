@@ -1,0 +1,44 @@
+
+html, body, .home:before
+{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.home, form
+{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 50%;
+    height: 100vh;
+    margin: auto;
+}
+
+.home:before
+{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    content: " ";
+    background-image: url('../../img/backgr.png');
+    background-size: cover;
+}
+
+.home>form
+{
+    transform: translateX(5px) scale(2);
+    transform-origin: center center;
+    align-items: center;
+}
+
+.material-symbols-outlined
+{
+    transform: translateY(5px);
+}
