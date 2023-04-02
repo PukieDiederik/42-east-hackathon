@@ -35,7 +35,7 @@ export default function AllMatchNames({ search }) {
     fetchUsers();
   }, [search]);
 
-  if (loading) return <div className="loading">Loading...</div>;
+  if (loading) return <div className="loading"></div>;
   if (error) return <div className="error">Error: {error.message}</div>;
   if (!userData) return <div className="no-user">No user found</div>;
   return <div className="all-match-names">

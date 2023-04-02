@@ -1,11 +1,14 @@
-
+.home {
+    width: 100vw;
+    height: 100vh;
+    overflow-Y: hidden;
+}
 html, body, .home:before
 {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100vh;
-    overflow: hidden;
 }
 
 .home, form
@@ -33,7 +36,7 @@ html, body, .home:before
 
 .home>form
 {
-    transform: translateX(5px) scale(2);
+    transform: translateX(100px) scale(2);
     transform-origin: center center;
     align-items: center;
 }
@@ -41,4 +44,18 @@ html, body, .home:before
 .material-symbols-outlined
 {
     transform: translateY(5px);
+}
+
+.loading
+{
+    position: absolute;
+    top: 60%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border: 10px solid #b55c08;
+    border-top: 10px solid #153952;
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
 }

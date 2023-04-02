@@ -44,7 +44,7 @@ export default function Proj({ project }) {
               {project.description}
             </tspan>
             <tspan font-size="10" x="0" y="20">
-              {project.keywords}
+              {project.keywords.join(", ")}
             </tspan>
           </text>
           <line
