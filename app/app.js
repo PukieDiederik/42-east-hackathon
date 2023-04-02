@@ -1,3 +1,4 @@
+const cors = require('cors')
 require('dotenv').config()
 
 const express = require("express");
@@ -5,7 +6,7 @@ var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 const app = express();
 
 var access_token = 0;
-
+app.use(cors())
 app.get('/', (req, res) => {
 	res.send('hello world!');
 });
@@ -62,7 +63,7 @@ app.get('/user/:user', (req, res) => {
 		// Check if we should add this project to the list
 		if (project.exam == true)
 			continue;
-		
+
 		// Check if the project is validated
 		let r = res_json.projects_users.filter(function (item) {
 			return item.project.id == project.id;
