@@ -37,7 +37,7 @@ export function Project({project, bonus, distinct, group, descr, learn}) {
 export function Cursus({finished, fview, started, sview}) {
   return (
     <section className="cursus">
-     <svg display="block" transform="translate(-1.5 0)" id="cursus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 595.28 115.63">
+     <svg display="block" id="cursus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 595.28 115.63">
             <g>
                 <path d="m212.5,1.5v.46h-17.77v-.46h17.77m1.5-1.5h-20.77v3.46h20.77V0h0Z" fill="#0f7c84"/>
                 <text display={fview} text_anchor="middle" transform="translate(152.09 27.26)" fill="#09687a" font-family="Commissioner-Bold, Commissioner" font-size="13" font-weight="700"><tspan x="0" y="0">{finished}</tspan></text>

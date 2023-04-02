@@ -1,13 +1,11 @@
 
 .profile{
-    border: 1px solid red;
     width: 100%;
 }
 
 #lines
 {
     position: absolute;
-    border: 1px solid red;
     position:absolute;
     transform:scale(0.5);
     height: 200vh;
